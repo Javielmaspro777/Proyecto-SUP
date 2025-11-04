@@ -49,7 +49,7 @@
 }
 .acerca{
     width: 100%;
-    height: 75rem;
+    height: 90rem;
     background-image: url(../img/infierno.jpg);
     background-size: cover;
     background-position: center;
@@ -65,10 +65,12 @@ html, body {
 html{
     font-size: 62.5%;
 }
-
+body{
+    font-size: 16px;
+}
 header div{
     width: 100%;
-    height: 75rem;
+    height: 78.7rem;
     background-image: url(../img/titulo.jpg);
     background-size: cover;
     background-position: center;
@@ -114,10 +116,11 @@ main{
     position: relative;
     background-attachment: fixed;
     text-align: center;
+    padding-top: 5rem;
 }
 .premios{
     width: 100%;
-    height: 70rem;
+    height: 90rem;
     background-image: url(../img/premios.jpg);
     background-size: cover;
     background-position: center;
@@ -131,7 +134,7 @@ main{
     background-position: center;
     display: flex;
     justify-content: space-around;
-    padding-top: 10rem;
+    padding-top: 15rem;
     
 }
 .pictures{
@@ -139,7 +142,11 @@ main{
     justify-content: space-around;
     padding-top: 3rem;
 }
+.pictures a{
+    text-decoration: none;
+}
 .centro{
+    box-sizing: border-box;
     background-color: var(--gris);
     padding: 2rem;
     transition: transform 0.4s ease;
@@ -165,6 +172,7 @@ main{
 
     background-color: var(--negro);
     align-items: center;
+    box-sizing: border-box;
 }
 .parrafobotones{
     font-size: 2rem;
@@ -182,21 +190,59 @@ main{
     background-color:var(--xbox) ;
     font-size: 0.5rem;
 }
+#xbox :hover{
+    background-color: #0b5a0a;
+}
 .play{
     background-color: var(--play);
     font-size: 0.5rem;
+}
+#play :hover{
+    background-color: #102052;
 }
 .switch{
     background-color: var(--switch);
     font-size: 0.5rem;
 }
+#switch :hover{
+    background-color: #790711;
+}
 .steam{
     background-color: var(--steam);
     font-size: 0.5rem;
 }
+#steam :hover{
+    background-color: #033344;
+}
 .cajacompra a{
     text-decoration: none;
 }
-@media (max-width768) {
+.meta{
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    background-color: rgb(24, 126, 54);
+    text-decoration: none;
     
+}
+footer{
+    width: 100%;
+    height: 15rem;
+    background-color: var(--negro);
+}
+
+@media (max-width: 1024px) {
+    header div h1{
+        left: 9rem;
+    }
+    .pictures{
+        height: 60rem;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .centro{
+        width: 37rem;
+        height: 24rem;
+    }
 }
