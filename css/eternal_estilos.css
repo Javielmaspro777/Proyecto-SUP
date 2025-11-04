@@ -3,6 +3,10 @@
     --blanco : rgb(255, 255, 255);
     --gris : #242d2b;
     --negro:#000;
+    --xbox :#0e7a0d;
+    --play:#193285;
+    --switch:#e60012;
+    --steam:#007ead;
 }
 *{
     padding: 0rem;
@@ -30,6 +34,11 @@
     width: 30rem;
     height: 30rem;
 }
+.img2{
+    width: 50rem;
+    height: 30rem;
+    padding-top: 10rem;
+}
 .block{
     display: flex;
     justify-content: space-around;
@@ -45,6 +54,12 @@
     background-size: cover;
     background-position: center;
     text-align: center;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--negro); 
 }
 
 html{
@@ -111,11 +126,13 @@ main{
 .compra{
     width: 100%;
     height: 70rem;
-    display: flex;
-    justify-content: space-between;
     background-image: url(../img/infierno.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10rem;
+    
 }
 .pictures{
     display: flex;
@@ -132,4 +149,54 @@ main{
 }
 .centrar{
     padding-top: 13rem;
+}
+.cajabotones{
+    width: 20rem;
+    height: 6.2rem;
+    display: flex;
+    justify-content: start;
+}
+.cajacompra{
+    width: 40rem;
+    height: 60rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    background-color: var(--negro);
+    align-items: center;
+}
+.parrafobotones{
+    font-size: 2rem;
+    font-family: Orbitron, Open Sans, Noto Sans Japanese, Trade Gothic Bold Condensed No20, sans-serif;
+    padding-top:1.7rem ;
+    text-align: start;
+    
+}
+.boton{
+    width: 10rem;
+    height: 4rem;
+    padding-top: 1rem ;
+}
+.xbox{
+    background-color:var(--xbox) ;
+    font-size: 0.5rem;
+}
+.play{
+    background-color: var(--play);
+    font-size: 0.5rem;
+}
+.switch{
+    background-color: var(--switch);
+    font-size: 0.5rem;
+}
+.steam{
+    background-color: var(--steam);
+    font-size: 0.5rem;
+}
+.cajacompra a{
+    text-decoration: none;
+}
+@media (max-width768) {
+    
 }
