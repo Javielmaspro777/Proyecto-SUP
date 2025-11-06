@@ -1,6 +1,6 @@
 :root{
-    --rojo:61060a;
-    --blanco : rgb(255, 255, 255);
+    --rojo: #61060a;
+    --blanco : #ffffff;
     --gris : #242d2b;
     --negro:#000;
     --xbox :#0e7a0d;
@@ -19,6 +19,16 @@ body{
     width: 0rem;
     height: 0rem;
 }
+
+.material-symbols-outlined {
+    font-size: 8rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
 *{
     padding: 0rem;
     margin: 0rem;
@@ -67,6 +77,7 @@ body{
     background-size: cover;
     background-position: center;
     text-align: center;
+    justify-content: center;
 }
 html, body {
     margin: 0;
@@ -75,6 +86,9 @@ html, body {
     background-color: var(--negro); 
 }
 
+.cajacompra > p{
+    text-align: center;
+} 
 
 header > div{
     width: 100%;
@@ -83,11 +97,12 @@ header > div{
     background-size: cover;
     background-position: center;
     position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
 }
 header > div > h1{
-    position: absolute;
-    bottom: 0rem;
-    left: 2rem;
+    position: relative;
     font-size: 20rem;
 }
 
@@ -103,7 +118,7 @@ nav a,.botonn{
     margin-bottom: 5.4rem;
     font-size: 2rem;
     padding: 1rem;
-    background-color: rgba(165, 42, 42, 0.519);
+    background-color: #a52a2a84;
 }
 nav a:focus {
     background-color: #b30000;
@@ -125,7 +140,7 @@ nav a:focus {
     background-position: center;
     position: relative;
     background-attachment: fixed;
-    text-align: center;
+    justify-content: center;
     padding-top: 5rem;
 }
 .historia article{
@@ -214,9 +229,7 @@ nav a:focus {
 #xbox :hover{
     background-color: #0b5a0a;
 }
-#xbox:focus{
-    background-color: #020f02;
-}
+
 .play{
     background-color: var(--play);
     font-size: 0.5rem;
@@ -241,14 +254,20 @@ nav a:focus {
 .cajacompra a{
     text-decoration: none;
 }
+div > span{
+        position: absolute;
+        top: 0rem;
+}
+
 #phistoria{
     height: 78rem;
+    text-align: center;
 }
 .meta{
     display: flex;
     justify-content: center;
     width: 4rem;
-    background-color: rgb(24, 126, 54);
+    background-color: #187e36;
     text-decoration: none;
     box-sizing: border-box;
     
@@ -260,7 +279,7 @@ footer{
 }
 
 #aparrafo:target,#phistoria:target {
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: #ff00004d;
     border: 0.3rem solid red;
 }
 
@@ -360,17 +379,23 @@ footer{
         width: 32rem;
         background-image: url(../img/titulo\ -\ copia.jpg);
         background-position: center;
-        align-items: center;
+        flex-direction: column;
         display: flex;
+        justify-content: end;
+        
         
     }
+    
     header div h1{
         font-size: 11rem;
-        text-align: center;
         left: 0rem;
         position: relative;
-    }
+        text-align: center;
 
+    }
+    header div span {
+        top: 0rem;
+    }
     nav{
         height: 30rem;
         align-items: center;
@@ -423,5 +448,6 @@ footer{
     }
     #phistoria{
     height: 86rem;
-}
+    }
+
 }
