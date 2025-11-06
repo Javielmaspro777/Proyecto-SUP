@@ -1,6 +1,6 @@
 :root{
-    --rojo:61060a;
-    --blanco : rgb(255, 255, 255);
+    --rojo:#61060a;
+    --blanco : #ffffff;
     --gris : #242d2b;
     --negro:#000;
 }
@@ -18,10 +18,10 @@ body{
     font-size: 3rem;
     font-style: normal;
     color: var(--blanco);
+    box-sizing: border-box;
 }
 .titulo{
     font-family: 'DOOM 2016 Left', sans-serif;
-    letter-spacing: 1rem;
     text-shadow:
         -0.3rem 0 var(--negro),
         0.3rem 0 var(--negro),
@@ -88,64 +88,8 @@ main{
     justify-content: center;
     align-items: center;
 }
-.container{
-    width: 90rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 2rem;    
-}
-.card{
-    height: 50rem;
-    flex: 1;
-    border-radius: 2rem;
-    overflow: hidden;
-    position: relative;
-    transition: 1s all ease;
-}
-.card .ver{
-    visibility: hidden;
-}
-.card:hover{
-    flex: 4;
+.boton{
     cursor: pointer;
-    box-shadow: 0 1rem 1rem black;
-}
-.card:hover .ver{
-    animation: aparece .3s ease-in-out backwards;
-    visibility: visible;
-    padding-bottom: 20rem;
-}
-.vidio{
-    width: 50rem;
-    height: 30rem;
-    padding-left: 4rem;
-}
-.card p{
-    padding-left: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-}
-.card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.card span{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgb(0, 0, 0, 0.2);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    transform: translateX(-100%);
-}
-.card:hover>span{
-    background: rgb(0, 0, 0, 0.7);
 }
 .material-symbols-outlined {
     font-size: 8rem;
@@ -183,21 +127,257 @@ main{
 
 #menuToggle:checked ~ .menu{
     display: flex;
-    flex-direction: column;
-}
+    flex-direction: row;
+} 
 .menu li{
     padding: 1rem;
 }
-@media (min-width: 900px){
+.menu li a:focus{
+    background-color: #cf2c1a;
+}
+@media (min-width: 768px){
+    header>div>h1{
+        font-size: 25rem;
+        letter-spacing: 1rem;
+    }
     .barra{
         flex-direction: row;
     }
     .boton{
+        justify-content: center;
+        align-items: center;
         margin-right: 20rem;
+    }
+    #menuToogle:checked ~ .menu{
+        display: flex;
+        flex-direction: row;
+    }
+    footer p{
+    background: #0f0f11;
+    color: #c4b810;
+    font-size: 1.5rem;
+    }
+    .container{
+        width: 90rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap: 2rem;    
+    }
+    .card{
+        height: 50rem;
+        flex: 1;
+        border-radius: 2rem;
+        overflow: hidden;
+        position: relative;
+        transition: 1s all ease;
+    }
+    .card .ver, .vervid{
+        visibility: hidden;
+    }
+    .card:hover{
+        flex: 4;
+        cursor: pointer;
+        box-shadow: 0 1rem 1rem black;
+    }
+    .card:hover .ver{
+        animation: aparece .3s ease-in-out backwards;
+        visibility: visible;
+        padding-bottom: 20rem;
+    }
+    .card:hover .vervid{
+        visibility: visible;
+        padding-bottom: 20rem;
+    }
+    .vidio{
+        width: 50rem;
+        height: 30rem;
+        padding-left: 4rem;
+    }
+    .card p{
+        margin-top: 5rem;
+        padding-left: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .card span{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgb(0, 0, 0, 0.2);
+        color: var(--blanco);
+        padding: 2rem;
+        text-align: center;
+        transform: translateX(-100%);
+    }
+    .card:hover>span{
+        background: #000000b3;
+    }    
+}
+
+@media (max-width: 768px){
+    header>div>h1{
+        font-size: 15rem;
+        letter-spacing: 1rem;
+    }
+    .barra{
+        flex-direction: column;
     }
     #menuToggle:checked ~ .menu{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     }
-    
+    footer p{
+        background: #0f0f11;
+        color: #cf811a;
+        font-size: 1rem;
+    }    
+    .container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    }
+    .card{
+        width: 40rem;
+        height: 15rem;
+        flex: 1;
+        border-radius: 2rem;
+        overflow: hidden;
+        position: relative;
+        transition: 1s all ease;
+    }
+    .card p{
+        font-size: 1.5rem;
+        padding-bottom: 8rem;
+    }
+    .card .ver, .vervid{
+        visibility: hidden;
+    }
+    .card:hover .ver{
+        visibility: visible;
+        padding-bottom: 3rem;
+    }
+    .card:hover .vervid{
+        visibility: visible;
+    }
+    .card:hover{
+        flex: 5;
+        cursor: pointer;
+        box-shadow: 0 1rem 4rem black;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .card span{ /*Selector descendiente */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00000033;
+        color: var(--blanco);
+        padding: 20px 0px;
+        text-align: center;
+
+    }
+    .card:hover>span{
+        background: #000000e6;
+    }
+    .vidio{
+        width: 40rem;
+        height: 50rem;
+        padding-bottom: 15rem;
+    }
+}
+@media  (max-width:425px){
+    header>div>h1{ /*Selector Padre a hijo*/
+        font-size: 10rem;
+        letter-spacing: 0.7rem;
+    }
+    footer p{ /*Selector descendiente*/
+    background: #0f0f11;
+    color: #b32414;
+    font-size: 0.8rem;
+    }
+    .barra{
+        flex-direction: column;
+    }
+    #menuToggle:checked ~ .menu{
+    display: flex;
+    flex-direction: column;
+    }
+    .container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+    .card{
+        width: 30rem;
+        height: 10rem;
+        flex: 1;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        transition: 1s all ease;
+    }
+    .card p{
+        font-size: 1.5rem;
+        padding-bottom: 10rem;
+    }
+    .card .ver, .vervid{ /*Selector Multiple*/
+        visibility: hidden;
+    }
+    .card:hover .ver{
+        visibility: visible;
+        padding-bottom: 2rem;
+    }
+    .card:hover .vervid{
+        visibility: visible;
+    }
+    .card:hover{
+        flex: 5;
+        cursor: pointer;
+        box-shadow: 0 1rem 4rem black;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .card span{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00000033;
+        color: #ffffff;
+        padding: 20px 0px;
+        text-align: center;
+
+    }
+    .card:hover>span{
+        background: #000000e6;
+    }
+    .vidio{
+        width: 30rem;
+        height: 40rem;
+        padding-bottom: 10rem;
+    }
 }
